@@ -141,5 +141,5 @@ metaplotsum(Pos,Neg,P,N,'sense');
 #When computing average for the antisense data
 metaplotsum(Pos,Neg,P,N,'antisense');
 ```
-
-Next, copy the metaplot data from the mapped.fragments-mean.metaplot and/or mapped.fragments-sum.metaplot file to an MS Excel file for plotting purposes. 
+## Output:
+The metaplot data is present in the mapped.fragments-mean.metaplot and/or mapped.fragments-sum.metaplot files in a 2 column format. The first column shows hypothetical genomic positions of all genomic intervals used in these metaplots. The second column shows the summary data for all genomic positions. The metaplot data can be copied to an MS Excel file for plotting purposes.
