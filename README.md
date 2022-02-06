@@ -3,18 +3,22 @@ Counting fragments and making metaplots using bedtools and python.
 
 Author: Mrutyunjaya Parida, David Price Lab, UIOWA
 
-##Counting fragments for given genomic intervals:
+## Counting fragments for given genomic intervals:
+
 ```bedtools coverage –a genomic-intervals.bed –b mapped.deduped.fragments.bed –counts > genomic-intervals-fragment-counts.bed```
 
-##Counting sense fragments for given genomic intervals:
+## Counting sense fragments for given genomic intervals:
+
 ```bedtools coverage –a genomic-intervals.bed –b mapped.deduped.fragments.bed –s –counts > genomic-intervals-fragment-counts-sense.bed```
 The –s option requires same strandedness.
 
-##Counting anti-sense fragments for given genomic intervals:
+## Counting anti-sense fragments for given genomic intervals:
+
 ```bedtools coverage –a genomic-intervals.bed –b mapped.deduped.fragments.bed –S –counts > genomic-intervals-fragment-counts-antisense.bed```
 The –S option requires same strandedness.
 
-##Counting 5’ ends of sense fragments for given genomic intervals:
+## Counting 5’ ends of sense fragments for given genomic intervals:
+
 First run this python code to get the 5’ ends of fragments: 
 ```
 OFILE=open('mapped.deduped.fragments.5prime.bed', 'w'); #change name of the output file here
@@ -29,10 +33,12 @@ OFILE.close();
 Next run the following command:
 ```bedtools coverage –a genomic-intervals.bed –b mapped.deduped.fragments.5prime.bed –s –counts > genomic-intervals-fragment-5primeends-counts-sense.bed```
 
-##Counting 5’ ends of anti-sense fragments for given genomic intervals:
+## Counting 5’ ends of anti-sense fragments for given genomic intervals:
+
 ```bedtools coverage –a genomic-intervals.bed –b mapped.deduped.fragments.5prime.bed –S –counts > genomic-intervals-fragment-5primeends-counts-anti-sense.bed```
 
-##Counting 3’ ends of sense fragments for given genomic intervals.
+## Counting 3’ ends of sense fragments for given genomic intervals:
+
 First run this python code to get the 3’ ends of fragments: 
 ```
 OFILE=open('mapped.deduped.fragments.3prime.bed', 'w'); #change name of the output file here
@@ -47,10 +53,12 @@ OFILE.close();
 Next run the following command:
 ```bedtools coverage –a genomic-intervals.bed –b mapped.deduped.fragments.3prime.bed –s –counts > genomic-intervals-fragment-3primeends-counts-sense.bed```
 
-##Counting 3’ ends of anti-sense fragments for given genomic intervals:
+## Counting 3’ ends of anti-sense fragments for given genomic intervals:
+
 ```bedtools coverage –a genomic-intervals.bed –b mapped.deduped.fragments.3prime.bed –S –counts > genomic-intervals-fragment-3primeends-counts-anti-sense.bed```
 
-##Counting depth for every position of given genomic intervals:
+## Counting depth for every position of given genomic intervals:
+
 First, make sure all the genomic intervals are of the same length.
 Replace the –counts option with the –d option and run the commands above for specific tasks. Do not use –s and –S if fragments or 5’ ends or 3’ ends from both strands are counted for a list of genomic intervals.
 Metaplot after counting depth for every position of given genomic intervals.
