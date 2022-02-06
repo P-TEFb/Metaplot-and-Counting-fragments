@@ -1,5 +1,6 @@
 # Metaplot-and-Counting-fragments
-Counting fragments and making metaplots using bedtools and python.
+Counting fragments and making metaplots using bedtools and python. Steps used in this document have been published in the following research articles:
+
 
 Author: Mrutyunjaya Parida, David Price Lab, UIOWA
 
