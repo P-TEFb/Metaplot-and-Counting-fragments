@@ -31,6 +31,7 @@ for line in open('mapped.deduped.fragments.bed','r'): #change name of the input 
 OFILE.close();
 ```
 Next run the following command:
+
 ```bedtools coverage –a genomic-intervals.bed –b mapped.deduped.fragments.5prime.bed –s –counts > genomic-intervals-fragment-5primeends-counts-sense.bed```
 
 ## Counting 5’ ends of anti-sense fragments for given genomic intervals:
@@ -51,6 +52,7 @@ for line in open('mapped.deduped.fragments.bed','r'): #change name of the input 
 OFILE.close();
 ```
 Next run the following command:
+
 ```bedtools coverage –a genomic-intervals.bed –b mapped.deduped.fragments.3prime.bed –s –counts > genomic-intervals-fragment-3primeends-counts-sense.bed```
 
 ## Counting 3’ ends of anti-sense fragments for given genomic intervals:
