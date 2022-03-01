@@ -18,7 +18,7 @@ The –s option requires same strandedness.
 ## Counting anti-sense fragments for given genomic intervals:
 
 ```bedtools coverage –a genomic-intervals.bed –b mapped.deduped.fragments.bed –S –counts > genomic-intervals-fragment-counts-antisense.bed```
-The –S option requires same strandedness.
+The –S option requires opposite strandedness.
 
 ## Counting 5’ ends of sense fragments for given genomic intervals:
 
