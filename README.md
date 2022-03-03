@@ -9,6 +9,7 @@ Author: Mrutyunjaya Parida, David Price Lab, UIOWA
 ## Counting fragments for given genomic intervals:
 
 ```bedtools coverage –a genomic-intervals.bed –b mapped.deduped.fragments.bed –counts > genomic-intervals-fragment-counts.bed```
+You may use the -nonamecheck option to avoid warnings from bedtools if you have multiple genomes in the mapped.deduped.fragments.bed file and your interval file has only one genome to query instead of all the genomes in the mapped fragments bed file.
 
 ## Counting sense fragments for given genomic intervals:
 
